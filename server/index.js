@@ -1,5 +1,6 @@
 const express = require('express');
 const http = require('http');
+const cors= require('cors');
 const app = express();
 const server = http.createServer(app);
 const { getInfo, getMessages, addUser, addMessage, addCountry, getUsers } = require('./controllers')
@@ -7,6 +8,7 @@ const { getInfo, getMessages, addUser, addMessage, addCountry, getUsers } = requ
 //Using Router for handling Get request on Server Startup 
 const router = require('./router');
 app.use(router);
+app.use(cors());
 
 //requiring all necessary libraries for Socket.io
 const socket = require('socket.io')

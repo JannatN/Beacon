@@ -30,7 +30,7 @@ const Map = () => {
       }
     ).addTo(map);
 
-    socket.on('countries', ({ countries}) => {
+    socket.on('countries', ({ countries }) => {
       setTotalCountries(countries.countries.total)
       setTotalMessages(countries.messages)
       setTotalUsers(countries.users)
