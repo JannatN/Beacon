@@ -5,7 +5,7 @@ import React from 'react'
 
 const Messages = ({ name, messages, country }) => (
     <ScrollToBottom className="scroller">
-        {messages.map((messageloop, i) => <div key={i}> <Message message={messageloop} name={name} country={country}/> </div>)}
+        {messages.map((messageloop) =>  <Message message={messageloop} name={name} country={country}/>)}
     </ScrollToBottom>
 )
 
