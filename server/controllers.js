@@ -1,8 +1,6 @@
 const axios = require('axios');
-
 let countries = require('./countries')
 var users = 0; //total number of users is the length of the array
- //total number of countries is the length of values 
 const messages = []; //total number of messages is the length of the array
 
 const getInfo = () =>{
