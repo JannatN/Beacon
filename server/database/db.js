@@ -11,5 +11,5 @@ db.once("open", function () {
 
 module.exports = {
   message: require('./models/message'),
-  message: require('./models/totals'),
+  totals : require('./models/totals'),
 }
