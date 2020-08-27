@@ -7,18 +7,18 @@ const userSchema = new mongoose.Schema({
     Id: {
         type: Number
     },
-    City:{
+    City: {
         type: String
     },
-    Country:{
+    Country: {
         type: String
     },
-    Message:{
+    Message: {
         type: Array
     }
 },
     { timestamps: true })
 
-let user = mongoose.model('user',userSchema);
+let user = mongoose.model('user', userSchema);
 
 module.exports = user
