@@ -10,6 +10,7 @@ const getInfo = () => {
 }
 
 const addCountry = ({ city, country }) => {
+
     db.country.findOne({ code: country }).then(resp => {
         if (resp != null) {
             db.country.findByIdAndUpdate(resp._id, { $inc: { num: 1 } })
@@ -32,6 +33,7 @@ const addCountry = ({ city, country }) => {
                 })
         }
     })
+
     return {
         country: country,
         info: countries[country],
@@ -56,6 +58,7 @@ const addMessage = ({ name, country, message }) => {
 }
 
 const addUser = () => {
+    // let totalNumOfUsers= db.collection.update( {$inc: { totalNumberOfUsers: 1 }});
     let userID = "5f46902c02585e5d168d56ce"
     db.totals.findByIdAndUpdate(userID, { $inc: { totalNumberOfUsers: 1 } })
         .then(() => {
