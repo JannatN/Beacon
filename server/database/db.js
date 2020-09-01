@@ -11,6 +11,11 @@ db.once("open", function () {
 
 module.exports = {
   message: require('./models/message'),
+<<<<<<< HEAD
   totals: require('./models/totals'),
   country: require('./models/country')
+=======
+  totals : require('./models/totals'),
+  country : require('./models/country'),
+>>>>>>> f56e67360bfe706ff4ea59cd136d51ffad86b8b2
 }
