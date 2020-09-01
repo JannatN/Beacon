@@ -1,12 +1,11 @@
-
 import './Message.css';
 import React from 'react';
 import ReactEmoji from 'react-emoji';
 import Avatar from '@material-ui/core/Avatar';
 
-const Message = ({ message, name, country}) => {
+const Message = ({ message, name, country }) => {
   let isSentByCurrentUser = false;
-  if (message.name === name) { //the current user is name, message.name the other person
+  if (message.name === name && message.country === country) { //the current user is name, message.name the other person
     isSentByCurrentUser = true;
   }
   return (
@@ -25,7 +24,7 @@ const Message = ({ message, name, country}) => {
         <div className="messageContainer justifyStart">
           <Avatar className="mt mr" alt="Remy Sharp" src={require(`../../../flags/${message.country.toLowerCase()}.png`)} />
           <div className="messageBox backgroundLight">
-            <p className="messageText colorDark">{message.message}</p>
+            <p className="messageText colorDark">{ReactEmoji.emojify(message.message)}</p>
           </div>
           <p className="sentText pl-10 ">{message.name}</p>
         </div>
